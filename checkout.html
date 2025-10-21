@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Checkout — Poster Point</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="mark">PP</div>
+      <div>
+        <div class="title">Poster Point</div>
+        <div class="subtitle">Checkout</div>
+      </div>
+    </div>
+    <button id="checkout-close-btn" class="back-btn" aria-label="Close checkout" title="Back to shop" style="margin-left:auto;padding:8px 12px;background:#fff;border:1px solid #ddd;border-radius:6px;cursor:pointer">← Back</button>
+  </header>
+
+  <main style="padding:28px;">
+    <h2>Checkout</h2>
+    <div id="checkout-body">
+      <!-- items rendered by checkout.js -->
+    </div>
+    <div id="min-order-note" style="margin-top:12px;color:#b00;display:none;font-size:14px">Minimum order amount is ₹250. Add more items to proceed to payment.</div>
+    <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+      <div style="flex:1">
+        <div style="color:var(--muted);font-size:13px">Total</div>
+        <div id="checkout-total" class="total">₹0</div>
+      </div>
+      <div>
+        <button id="pay-btn" class="checkout">Pay now</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="checkout.js"></script>
+</body>
+</html>
